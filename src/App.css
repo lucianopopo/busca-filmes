@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Geomanist';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/Geomanist-Regular.otf') format('truetype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Geomanist-Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/Geomanist-Bold.otf') format('truetype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Geomanist-Light';
+  font-style: normal;
+  src: url('./assets/fonts/Geomanist-Light.otf') format('truetype');
 }
 
-.App-header {
-  background-color: #282c34;
+@font-face {
+  font-family: 'Geomanist-Medium';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/Geomanist-Medium.otf') format('truetype');
+}
+
+html {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  scroll-behavior: smooth;
+  font-family: 'Geomanist' !important;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background: #f0f0f7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bgjet {
+  background-color: #2d2d2aff;
+}
+.bgdavys-grey {
+  background-color: #4c4c47ff;
+}
+.bgcool-grey {
+  background-color: #848fa5ff;
+}
+.bgbrick-red {
+  background-color: #c14953ff;
+}
+.bgbone {
+  background-color: #e5dcc5ff;
 }

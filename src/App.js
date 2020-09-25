@@ -1,25 +1,36 @@
+//#region Imports
+
+import { ThemeProvider } from '@material-ui/core';
+import { SnackbarProvider } from 'notistack';
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import AppRoutes from './AppRoutes';
+import AppTheme from './AppTheme';
+import Footer from './components/Footer/index';
+import Menu from './containers/Menu/index';
+
+//#endregion
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <BrowserRouter>
+      <ThemeProvider theme={AppTheme}>
+        <SnackbarProvider
+          maxSnack={5}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Menu>
+            <AppRoutes />
+          </Menu>
+
+          <Footer />
+        </SnackbarProvider>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
