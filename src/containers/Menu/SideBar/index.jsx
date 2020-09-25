@@ -8,10 +8,8 @@ import List from '@material-ui/core/List';
 import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import IconButton from '@material-ui/core/IconButton';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 import IMAGE from '../../../utils/constants/image';
 import MENU_ITENS from '../../../utils/constants/menu';
@@ -22,42 +20,31 @@ import SubMenu from './../SubMenu/index';
 
 //#endregion
 
-const SideBar = ({ control, handleDrawer }) => {
+const SideBar = () => {
   const styles = useStyles();
 
   const drawnerClass = clsx(styles.drawer, {
-    [styles.drawerOpen]: control,
-    [styles.drawerClose]: !control,
+    [styles.drawerOpen]: 'true',
   });
 
   const paperDrawnerClass = clsx(styles.drawnerCommons, {
-    [styles.drawerOpen]: control,
-    [styles.drawerClose]: !control,
+    [styles.drawerOpen]: 'true',
   });
 
   const logoClass = clsx(styles.logo, {
-    [styles.shortLogo]: control,
-    [styles.shortLogo]: !control,
-  });
-
-  const chevronRightClass = clsx(styles.controlIcon, {
-    [styles.controlIconRotateOpen]: control,
-    [styles.controlIconRotateClose]: !control,
+    [styles.shortLogo]: 'true',
   });
 
   const menuItemBoxClass = clsx(styles.itemBox, {
-    [styles.itemBoxOpen]: control,
-    [styles.itemBoxClose]: !control,
+    [styles.itemBoxOpen]: 'true',
   });
 
   const menuItemIconClass = clsx(styles.icon, {
-    [styles.iconOpen]: control,
-    [styles.iconClose]: !control,
+    [styles.iconOpen]: 'true',
   });
 
   const menuItemTextClass = clsx(styles.text, {
-    [styles.textOpen]: control,
-    [styles.textClose]: !control,
+    [styles.textOpen]: 'true',
   });
 
   return (
@@ -75,28 +62,13 @@ const SideBar = ({ control, handleDrawer }) => {
       <Box className={styles.listContainer}>
         <List className={styles.list}>
           <Box className={styles.header}>
-            <Box className={styles.controlIconBox}>
-              <IconButton onClick={handleDrawer}>
-                <ChevronRightIcon className={chevronRightClass} />
-              </IconButton>
-            </Box>
-            <img
-              className={logoClass}
-              src={IMAGE.MENU_LOGO}
-              alt="logo-menu.svg"
-            />
             <span primary="Busca Vídeos" className={menuItemTextClass}>
               Busca Vídeos
             </span>
           </Box>
           {MENU_ITENS.map((item, index) =>
             item.subMenu ? (
-              <SubMenu
-                key={index}
-                control={control}
-                item={item}
-                index={index}
-              />
+              <SubMenu key={index} item={item} index={index} />
             ) : (
               <Box
                 key={index}

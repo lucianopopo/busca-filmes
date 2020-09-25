@@ -20,7 +20,7 @@ export const Footer = ({ backgroundColor = 'gray', textColor = 'white' }) => {
       bgcolor={backgroundColor}
     >
       <Box color={textColor} fontWeight="bold" paddingLeft={10} fontSize={12}>
-        Busca Filmes © {new Date().getFullYear()} Nenhum o direito reservado.
+        Busca Filmes © {new Date().getFullYear()} - Nenhum direito reservado.
         Pode copiar!
       </Box>
     </Box>

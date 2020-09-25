@@ -8,18 +8,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 //#endregion
 
-const Header = ({ control }) => {
-    const styles = useStyles();
+const Header = () => {
+  const styles = useStyles();
 
-    const appBar = clsx(styles.appBar, {
-        [styles.appBarShift]: control
-    });
+  const appBar = clsx(styles.appBar);
 
-    return (
-        <AppBar position='fixed' className={appBar}>
-            <Toolbar />
-        </AppBar>
-    );
+  return (
+    <AppBar position="fixed" className={appBar}>
+      <Toolbar />
+    </AppBar>
+  );
 };
 
 export default Header;
