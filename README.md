@@ -1,7 +1,3 @@
-# busca-filmes
-
-App em React para busca de filmes
-
 # Busca Filmes
 
 Este repositório é um aplicativo em React sobre busca de Filmes, Séries e Atores.
