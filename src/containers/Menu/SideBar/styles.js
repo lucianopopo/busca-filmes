@@ -46,7 +46,7 @@ export const useStyles = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#e5dcc5',
+      backgroundColor: '#4c4c47',
       borderRight: `1px solid ${fade('#848fa5', 0.4)}`,
       ...theme.mixins.toolbar,
     },
@@ -211,7 +211,7 @@ export const useStyles = () => {
       },
     },
     selected: {
-      backgroundColor: '#24487d',
+      backgroundColor: '#c14953',
       '& a': {
         textDecoration: 'none',
       },

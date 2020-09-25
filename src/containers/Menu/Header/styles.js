@@ -9,7 +9,7 @@ export const useStyles = () => {
 
   const styles = makeStyles((theme) => ({
     appBar: {
-      backgroundColor: '#848fa5',
+      backgroundColor: '#fff',
       width: 'calc(100% - 50px)',
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
