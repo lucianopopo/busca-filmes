@@ -43,7 +43,7 @@ const Filmes = () => {
       <Box
         display="flex"
         flexWrap="wrap"
-        css={{ width: 1200, display: 'inline-block' }}
+        css={{ width: 1300, display: 'inline-block' }}
       >
         {listFilmes}
       </Box>

@@ -13,7 +13,7 @@ export const useStyles = () => {
       flexGrow: 1,
       borderRadius: 5,
       padding: 20,
-      minWidth: 1000,
+      minWidth: 1200,
     },
   }));
   return styles();

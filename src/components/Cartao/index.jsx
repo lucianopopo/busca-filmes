@@ -10,8 +10,8 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    width: 250,
-    height: 620,
+    width: 300,
+    height: 650,
     marginTop: 12,
     marginRight: 12,
     display: 'inline-block',
@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   },
   media: {
     height: 0,
-    paddingTop: '150%',
+    paddingTop: '140%',
     marginTop: '60',
   },
 });
@@ -44,10 +44,10 @@ const Cartao = ({ imagem, titulo, descricao }) => {
         <CardMedia className={classes.media} image={foto} title="Filme" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {titulo.substr(0, 17)}
+            {titulo}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {descricao.substr(0, 150)}
+            {descricao.substr(0, 140)}
           </Typography>
         </CardContent>
       </CardActionArea>
