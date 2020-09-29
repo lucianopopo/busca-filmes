@@ -10,7 +10,8 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 250,
+    width: 250,
+    height: 620,
     marginTop: 12,
     marginRight: 12,
     display: 'inline-block',
@@ -33,25 +34,20 @@ const useStyles = makeStyles({
   },
 });
 
-const Cartao = () => {
+const Cartao = ({ imagem, titulo, descricao }) => {
   const classes = useStyles();
+  const foto = `http://image.tmdb.org/t/p/w500${imagem}`;
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={require('../../assets/images/filme.jpg')}
-          title="Filme"
-        />
+        <CardMedia className={classes.media} image={foto} title="Filme" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Money Plane
+            {titulo.substr(0, 17)}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Um ladrão profissional com dívidas de 40 milhões de dólares deve
-            cometer um último golpe - roubar um cassino aéreo futurista cheio
-            dos criminosos mais perigosos do mundo.
+            {descricao.substr(0, 150)}
           </Typography>
         </CardContent>
       </CardActionArea>
