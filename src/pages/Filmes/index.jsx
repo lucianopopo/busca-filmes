@@ -1,14 +1,35 @@
 //#region Imports
 
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import Cartao from '../../components/Cartao';
+import Search from '../../components/Search';
+import Box from '@material-ui/core/Box';
+import FormContainer from './../../containers/FormContainer/index';
 
 //#endregion
 
-const Filmes = () => (
-  <Typography variant="h4" gutterBottom>
-    Filmes
-  </Typography>
-);
+const Filmes = () => {
+  return (
+    <div>
+      <FormContainer title="Busca de Filmes">
+        <Search></Search>
+      </FormContainer>
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        css={{ width: 1200, display: 'inline-block' }}
+      >
+        <Cartao />
+        <Cartao />
+        <Cartao />
+        <Cartao />
+        <Cartao />
+        <Cartao />
+        <Cartao />
+        <Cartao />
+      </Box>
+    </div>
+  );
+};
 
 export default Filmes;
