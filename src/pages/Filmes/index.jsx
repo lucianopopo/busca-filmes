@@ -17,7 +17,7 @@ const Filmes = () => {
   }, []);
 
   const buscaFilmes = () => {
-    DataService.getFilme()
+    DataService.getFilmesPopulares()
       .then((response) => {
         setfilmes(response.data.results);
         console.log(response.data.results);
